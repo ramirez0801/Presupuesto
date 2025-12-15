@@ -1,0 +1,29 @@
+<div class="row justify-content-center mt-4">
+    <div class="col-md-8">
+        <form class="row g-2" #f="ngForm" (ngSubmit)="f.form.valid && agregarValor()">
+            <div class="col-auto">
+                <select (change)="tipoOperacion($event)" class="form-select bg-success"
+                    [ngClass]="{'bg-danger' : tipo === 'egresoOpcion', 'bg-success' : tipo === 'ingresoOpcion'}">
+                    <option value="ingresoOpcion" selected>+</option>
+                    <option value="egresoOpcion">-</option>
+                </select>
+            </div>
+            <div class="col">
+                <input type="text" class="form-control border-success" placeholder="Descripcion" required
+                    [(ngModel)]="descripcionInput" name="descripcionInput"
+                    [ngClass]="{'border-danger' : tipo === 'egresoOpcion', 'border-success' : tipo === 'ingresoOpcion'}">
+            </div>
+            <div class="col-auto">
+                <input type="number" class="form-control border-success" placeholder="Valor" required
+                    [(ngModel)]="valorInput" name="valorInput"
+                    [ngClass]="{'border-danger' : tipo === 'egresoOpcion', 'border-success' : tipo === 'ingresoOpcion'}">
+            </div>
+            <div class="col-auto">
+                <button type="submit" class="btn"
+                    [ngClass]="{'bg-danger' : tipo === 'egresoOpcion', 'bg-success' : tipo === 'ingresoOpcion'}">
+                    <i class="bi bi-check-circle"></i>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
