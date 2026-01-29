@@ -1,6 +1,6 @@
-# AppPresupuesto: Gestor de Finanzas Personales
+# Presupuesto
 
-Este proyecto es una aplicación web para la gestión de presupuestos personales, permitiendo a los usuarios registrar y visualizar ingresos y egresos en tiempo real.
+Este proyecto es una aplicación web para la gestión de presupuestos personales, permitiendo a los usuarios registrar y visualizar ingresos y egresos.
 
 ---
 
